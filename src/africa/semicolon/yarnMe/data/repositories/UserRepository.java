@@ -9,7 +9,8 @@ public interface UserRepository {
     User findById(int id);
     long count();
     List<User> findAll();
-    void delete(User user);
-    void delete(int id);
+    void deleteByUser(User user);
+    void deleteById(int id);
     void deleteAll();
+    User findUserByUsername(String username);
 }

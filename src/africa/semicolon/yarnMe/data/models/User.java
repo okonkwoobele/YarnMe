@@ -1,11 +1,14 @@
 package data.models;
 
+import java.time.LocalDateTime;
+
 public class User {
     private int id;
     private String firstName;
     private String lastName;
     private String userName;
     private String password;
+    private LocalDateTime dateRegistered = LocalDateTime.now();
 
     public int getId() {
         return id;
@@ -45,5 +48,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", dateRegistered=" + dateRegistered +
+                '}';
+    }
+
+    public LocalDateTime getDateRegistered() {
+        return dateRegistered;
     }
 }

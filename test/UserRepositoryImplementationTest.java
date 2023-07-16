@@ -1,4 +1,4 @@
-package data.repositories;
+ package data.repositories;
 
 import data.models.User;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +13,7 @@ class UserRepositoryImplementationTest {
     @BeforeEach
     public void setUp(){
         userRepository = new UserRepositoryImplementation();
+
     }
     @Test
     public void saveOneUser_countIsOneTest(){
@@ -22,7 +23,9 @@ class UserRepositoryImplementationTest {
     }
     @Test
     public void saveOneUser_idOfUserIsOneTest(){
-        userRepository.save(user);
-        assertEquals(1, userRepository.count());
+        User savedUser = userRepository.save(user);
+        assertEquals(1, savedUser.getId() );
     }
+//@Test
+  //  public void
 }

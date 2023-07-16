@@ -4,7 +4,26 @@ import java.time.LocalDateTime;
 
 public class Comment {
     private int id;
-    private int articlefield;
+
+    public int getArticleId() {
+        return articleId;
+    }
+
+    public void setArticleId(int articleId) {
+        this.articleId = articleId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    private int articleId;
+
+    private int userId;
     private String comment;
     private LocalDateTime timeCreated = LocalDateTime.now();
 
@@ -14,14 +33,6 @@ public class Comment {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getArticlefield() {
-        return articlefield;
-    }
-
-    public void setArticlefield(int articlefield) {
-        this.articlefield = articlefield;
     }
 
     public String getComment() {
